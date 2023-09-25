@@ -1,0 +1,124 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: consolas;
+    color: #333;
+}
+
+ul {
+    list-style-type: none ;
+    display: flex;
+    padding-left: 0;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+li {
+    padding: 4px 8px;
+    border: solid 1px #333;
+    border-radius: 1em;
+}
+
+h1, h2, h3 {
+    color: black
+}
+
+a:hover {
+    color: deeppink;
+}
+
+summary {
+    font-style: italic;
+    color: black;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1154px;
+    display: block;
+}
+
+header {
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+header img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+header img:hover {
+    border-radius: 10% 90% 10% 90% / 90% 10% 90% 10%;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header .print {
+    flex-grow: 1;
+}
+
+header .print a {
+    background-color: black;
+    border-radius: 1em;
+    padding: 4px 8px;
+    color: white;
+    text-decoration: none;
+    float: right;
+}
+
+header .print a:hover {
+    background-color: deeppink;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    margin: 12px;
+}
+
+main div.col {
+    flex-grow: 1;
+}
+
+main div.col.left {
+    max-width: 360px;
+}
+
+main div.col.right {
+    max-width: 744px;
+}
+
+@media (max-width: 1154px) {
+    main div.col.left,
+    main div.col.right {
+        max-width: initial;
+    }
+    header {
+        flex-direction: column;
+    }
+}
+
+h2 {
+    border-bottom: solid 1px black;
+    margin-top: 0px; /* prevent margin collapsing */
+    padding: 4px 0;
+}
+
+section.experience .dates .from:not(:only-child)::after {
+    content: " →";    
+}
+
+section.experience .location::before {
+    content: "@ ";
+}
+
+.dates {
+    margin-top: -12px; /* change later */
+}
+
