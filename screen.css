@@ -1,13 +1,6 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: consolas;
-    color: #333;
-}
-
 ul {
     list-style-type: none ;
     display: flex;
-    padding-left: 0;
     gap: 8px;
     flex-wrap: wrap;
 }
@@ -18,36 +11,12 @@ li {
     border-radius: 1em;
 }
 
-h1, h2, h3 {
-    color: black
-}
-
-a:hover {
-    color: deeppink;
-}
-
-summary {
-    font-style: italic;
-    color: black;
-}
-
 body {
-    margin: 0 auto;
     max-width: 1154px;
-    display: block;
 }
 
 header {
-    margin: 12px;
-    display: flex;
-    align-items: center;
     column-gap: 12px;
-}
-
-header img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
 }
 
 header img:hover {
@@ -79,7 +48,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
-    margin: 12px;
 }
 
 main div.col {
@@ -105,20 +73,34 @@ main div.col.right {
 }
 
 h2 {
-    border-bottom: solid 1px black;
-    margin-top: 0px; /* prevent margin collapsing */
-    padding: 4px 0;
+    border-width: 1px; 
 }
 
-section.experience .dates .from:not(:only-child)::after {
-    content: " →";    
-}
+@media (prefers-color-scheme: dark) {
+    body {
+      background: #222;
+    }
 
-section.experience .location::before {
-    content: "@ ";
-}
+    * {
+        color: #eee;
+    }
 
-.dates {
-    margin-top: -12px; /* change later */
-}
+    li {
+        border-color: #eee;
+    }
 
+    header .print a {
+        background-color: white;
+        color: #333;
+    }
+
+    summary,
+    h1, h2, h3 {
+        color: white;
+    }
+
+    h2 {
+        border-color: white;
+    }
+  
+}

@@ -1,0 +1,68 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+ul {
+    padding-left: 0;
+}
+
+h1, h2, h3 {
+    color: black
+}
+
+h1 .jobtitle {
+    font-weight: lighter;
+}
+
+h1 .jobtitle::before {
+    content:"/"
+}
+
+a:hover {
+    color: deeppink;
+}
+
+summary {
+    font-style: italic;
+    color: black;
+}
+
+body {
+    margin: 0 auto;
+    display: block;
+}
+
+header {
+    margin: 12px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+main {
+    margin: 12px;
+}
+
+h2 {
+    border-bottom: solid black; /* déplacer la largeur */
+    margin-top: 0px; /* prevent margin collapsing */
+    padding: 4px 0;
+}
+
+section.experience .dates .from:not(:only-child)::after {
+    content: " →";    
+}
+
+section.experience .location::before {
+    content: "@ ";
+}
+
+.dates {
+    margin-top: -12px; /* change later */
+}

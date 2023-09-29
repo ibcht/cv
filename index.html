@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irénée Bauchet / DevOps</title>
-    <link rel="stylesheet" href="style.css" media="screen">    
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="screen.css" media="screen">
     <link rel="stylesheet" href="print.css" media="print">
     <link rel="shortcut icon" href="/icons8-hammer-30.png" type="image/x-icon">
 </head>
 <body>     
     <header>
         <img src="/photo.jpg" alt="Irénée Bauchet says 'Hello'">
-        <h1>Irénée Bauchet / DevOps</h1>
+        <h1>Irénée Bauchet <span class="jobtitle">devops</span></h1>
         <div class="print">
             <a href="#" onclick="window.print()" class="print">Imprimer ↩</a></div>
         </div>
@@ -70,15 +71,39 @@
                     <li>PHP, Symfony 4</li>
                     <li>SQL</li>
                 </ul>
+                <h3>Sécurité</h3>
+                <ul>
+                    <li>SAML2</li>
+                    <li>OAuth2 / OIDC</li>
+                    <li>OpenSSL</li>
+                </ul>
                 <h3>Langues</h3>
                 <ul>
-                    <li>Français</li><li>Anglais (C1)</li>
+                    <li>Français</li>
+                    <li>Anglais (C1)</li>
                 </ul>
             </section>
         </div>
         <div class="col right">
             <section id="experiences">
                 <h2>👨‍💻 Expériences</h2>
+                <section class="experience">
+                    <h3>Devops</h3>
+                    <p class="place">
+                        <span class="organisation">Tessi Technologies</span>
+                        <span class="location">Bordeaux</span>
+                    </p>
+                    <p class="dates">
+                        <span class="from">Septembre 2023</span>
+                        <span class="to">Aujourd'hui</span>
+                    </p>
+                    <ul class="activities">
+                        <li>Optimisation de l'intégration continue (Azure Devops)</li>
+                        <li>Conteneurisation d'applications</li>
+                        <li>Administration d'applications sous Kubernetes</li>
+                        <li>Scripting (bash / python)</li>
+                    </ul>
+                </section>
                 <section class="experience">
                     <h3>Intégrateur</h3>
                     <p class="place">
@@ -90,14 +115,17 @@
                         <span class="to">Aujourd'hui</span>
                     </p>
                     <ul class="activities">
-                        <li>Industrialisation d’une solution automate bancaire</li>
-                        <li>Déploiement d’applications mobiles de dématérialisation</li>
-                        <li>Tests d’intégration des modules logiciels</li>
+                        <li>Industrialisation d'une solution automate bancaire</li>
+                        <li>Déploiement d'applications mobiles de dématérialisation</li>
+                        <li>Tests d'intégration des modules logiciels</li>
                         <li>Recettes fonctionnelles</li>
+                        <li>Coordination projet</li>
+                        <li>Mise en oeuvre de SSO (SAML2 / OAuth2)</li>
+                        <li>Gestion de parc mobile Android (Samsung Knox)</li>
                     </ul>
                 </section>
                 <section class="experience">
-                    <h3>Analyse support</h3>
+                    <h3>Analyste support</h3>
                     <p class="place">
                         <span class="organisation">HR-IT Consulting</span>
                         <span class="location">Clermont-Ferrand</span>
@@ -107,10 +135,10 @@
                         <span class="to">Octobre 2017</span>
                     </p>
                     <ul class="activities">
-                        <li>Industrialisation d’une solution automate bancaire</li>
-                        <li>Déploiement d’applications mobiles de dématérialisation</li>
-                        <li>Tests d’intégration des modules logiciels</li>
-                        <li>Recettes fonctionnelles</li>
+                        <li>Gestion des incidents</li>
+                        <li>Suivi des performances et fine tuning</li>
+                        <li>Gestion de problèmes (RCA)</li>
+                        <li>Développement front Angular</li>
                     </ul>
                 </section>
                 <section class="experience">
@@ -196,6 +224,27 @@
                         <span class="from">2010</span>
                         <span class="to">2012</span>
                     </p>
+                </section>
+            </section>
+            <section id="projects">
+                <h2>✨ Loisirs et projets</h2>
+                <section class="experience">
+                    <h3>CartoLoco</h3>
+                    <p class="dates">
+                        <span class="from">2022</span>
+                        <span class="to">Aujourd'hui</span>
+                    </p>
+                    <ul class="activities">
+                        <li><a href="https://cartoloco.ibcht.eu/app/">https://cartoloco.ibcht.eu/app/</a></li>
+                        <li>App de cartographie des temps de trajet SNCF</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Loisirs</h3>
+                    <ul class="activities">
+                        <li>Piano et musique</li>
+                        <li>Enjeux mobilité (train, vélo)</li>
+                    </ul>
                 </section>
             </section>
         </div>
