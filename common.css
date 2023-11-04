@@ -55,14 +55,13 @@ h2 {
     padding: 4px 0;
 }
 
-section.experience .dates .from:not(:only-child)::after {
-    content: " →";    
-}
-
-section.experience .location::before {
-    content: "@ ";
-}
-
 .dates {
     margin-top: -12px; /* change later */
+}
+
+footer {
+    text-align: right;
+    font-style: italic;
+    margin: 12px;
+    font-size: 0.8em;
 }
