@@ -1,0 +1,145 @@
+basics:
+  name: Irénée Bauchet
+  label: devops
+  email: irenee@tuta.io
+  phone: 06 86 70 37 29
+  summary: 'Artisan polyvalent du numérique. DevOps, système, CI/CD, IOT, tests.<br>Valeurs : partage, respect, curiosité.'
+  image: https://about.ibcht.eu/photo.jpg
+  profiles:
+    - network: LinkedIn
+      username: ibcht
+      url: https://www.linkedin.com/in/ibcht/
+    - network: GitHub
+      username: ibcht
+      url: https://github.com/ibcht
+  birthdate: 08/05/1993 
+skills:
+  - name: Administration système
+    keywords:
+      - Linux
+      - Debian
+      - Bash
+  - name: Conteneurisation
+    keywords:
+      - Docker
+      - Kubernetes
+      - Helm
+      - Rancher
+      - Azure Kubernetes Service
+      - Harbor
+  - name: CI/CD
+    keywords:
+      - GitLab CI
+      - Azure Pipelines
+      - Gradle
+      - Jenkins
+      - Ansible, AWX
+  - name: Mobilité et IOT
+    keywords:
+      - Android
+      - SOC (Raspberry Pi)
+      - MDM (Samsung Knox Suite)
+  - name: Développement
+    keywords:
+      - Python, Flask
+      - Typescript, Angular
+      - Java, Springboot
+      - PHP
+      - SQL
+  - name: IAM et sécurité
+    keywords:
+      - SAML2
+      - OAuth2, OIDC
+      - Gestion des certificats
+      - Keycloak
+  - name: Langues
+    keywords:
+      - Français natif
+      - Anglais courant
+work:
+  - name: Tessi Technologies
+    location: Bordeaux
+    position: Ingénieur DevOps
+    startDate: 2023-09-01
+    summary: Accompagnement des équipes de développement sur l'accélération des déploiements et la conteneurisation d'application
+    highlights:
+      - Développement de playbooks Ansible
+      - Installation et administration AWX
+      - Mise en oeuvre de pipelines d'intégration continue (Azure Pipelines, Gitlab CI)
+      - Conteneurisation d'applications (Docker)
+      - Administration de cluster Kubernetes (AKS)
+      - Packaging gradle, npm
+      - Suivi et amélioration continue de la sécurité des applications
+  - name: Tessi Technologies
+    location: Bordeaux
+    position: Intégrateur
+    startDate: 2017-11-01
+    endDate: 2023-09-01
+    summary: Installation, test et déploiement des solutions Tessi
+    highlights:
+      - 'Industrialisation de solutions de captures IOT : automate de dépôt de chèque, application mobile de capture et reconnaissance embarquée'
+      - Installation et tests d'intégration
+      - Développement de tests de charge
+      - Rédaction de stratégie et plan de test
+      - Intégration SSO pour des clients externes (SAML2 / OAuth2)
+      - Gestion de politiques de parc de tablettes (MDM Samsung Knox)
+      - Avant-vente démonstration en clientèle
+      - Documentation et formation des équipes de run
+      - Développement de modules intergiciels (bash / python)
+      - Analyse système et réseau pour l'installation des environnements
+      - Développement de statistiques, analyse de données (SQL)
+  - name: HR-IT Consulting
+    location: Clermont-Ferrand
+    position: Analyste support
+    startDate: 2014-07-01
+    endDate: 2017-11-01
+    summary: Support applicatif fonctionnel et technique sur le périmètre des outils collaboratifs Michelin
+    highlights:
+      - Gestion des incidents
+      - Supervision, analyse des temps de réponses et amélioration des performances
+      - Gestion des problèmes (analyse des causes racines)
+      - Développement front Angular sur un projet interne
+  - name: Agence 4'33
+    location: Clermont-Ferrand
+    startDate: 2013-08-01
+    endDate: 2015-11-01
+    summary: Développement de sites web (CMS)
+    highlights:
+      - Rédaction des spécifications fonctionnelles
+      - Intégration web et développement (Wordpress, e-commerce)
+      - Optimisation SEO
+      - Hébergement et maintenance
+education:
+  - institution: Conservatoire National des Arts et Métiers
+    area: Licence Sciences, technologies, santé parcours informatique générale
+    startDate: 2016-01-01
+    endDate: 2020-01-01
+  - institution: Ingémédia - Toulon
+    area: Licence pro Nouvelles Technologies du Son
+    startDate: 2012-09-01
+    endDate: 2013-06-01
+  - institution: Université Blaise Pascal - Vichy
+    area: DUT Métiers du Multimédia et de l’Internet
+    startDate: 2010-06-01
+    endDate: 2012-09-01
+  - institution: Lycée Virlogeux - Riom
+    area: Baccalauréat Scientifique
+    startDate: 2007-09-01
+    endDate: 2010-07-01
+certificates:
+  - name: Certified Kubernetes Application Developer
+    date: 2023-03-20
+    issuer: Linux Foundation
+  - name: Certification testeur ISTQ Foundation
+    date: 2020-04-01
+    issuer: GASQ
+  - name: Certification BULATS niveau C1
+    date: 2019-11-10
+    issuer: Conservatoire National des Arts et Métiers
+projects:
+  - name: 'Cartoloco : application de cartographie des trajets SNCF'
+    url: https://cartoloco.ibcht.eu/app/
+  - name: Auto-hébergement Kubernetes (K3S)
+  - name: Piano, guitare, musique en général
+  - name: Environnement et mobilité
+  - name: Vélo

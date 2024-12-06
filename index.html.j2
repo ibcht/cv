@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ basics.name }} - {{ basics.label }}</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="screen.css" media="screen">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link rel="shortcut icon" href="/icons8-hammer-30.png" type="image/x-icon">
+</head>
+<body>     
+    <header>
+        <img src="/photo.jpg" alt="Irénée Bauchet says 'Hello'">
+        <h1>{{ basics.name }}<span class="jobtitle">{{ basics.label }}</span></h1>
+        <div class="print">
+            <a href="#" onclick="window.print()" class="print">Imprimer ↩</a></div>
+        </div>
+    </header>
+    <main>
+        <div class="col left">
+            <section id="about">
+                <h2>👋 A propos</h2>
+                <summary>{{ basics.summary }}</summary>
+                <ul>
+                    <li>08/05/1993</li>
+                    <li>31 rue Etchenique 33200 Bordeaux</li>
+                    <li>06 86 70 37 29</li>
+                    <li><a href="mailto:irenee@tuta.io">irenee@tuta.io</a></li>
+                    <li><a href="https://www.linkedin.com/in/ibcht/">https://www.linkedin.com/in/ibcht/</a></li>
+                    <li><a href="https://github.com/ibcht">https://github.com/ibcht</a></li>
+                </ul>
+            </section>
+            <section id="skills">
+                <h2>🔧 Compétences</h2>
+                {% for skill in skills %}
+                    <h3>{{ skill.name }}</h3>
+                    <ul>
+                    {% for keyword in skill.keywords %}
+                        <li>{{ keyword }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endfor %}
+            </section>
+        </div>
+        <div class="col right">
+            <section id="experiences">
+                <h2>👨‍💻 Expériences</h2>
+                {% for work_item in work %}
+                <section class="experience">
+                    <h3>{{ work_item.position }}</h3>
+                    <p class="place">{{ work_item.name }} @ {{ work_item.location }}</p>
+                    <p class="dates">{{ work_item.startDate }} → {{ work_item.endDate | default("Aujourd'hui") }}</p>
+                    <ul class="activities">
+                    {% for highlight in work_item.highlights %}
+                        <li>{{ highlight }}</li>
+                    {% endfor %}
+                    </ul>
+                </section>
+                {% endfor %}
+            </section>
+            <section id="certificates">
+                <h2>📜 Certifications</h2>
+                {% for certificate in certificates %}
+                    <section class="experience">
+                    <h3>{{ certificate.name }}</h3>
+                    <p class="place">{{ certificate.issuer }}</p>
+                    <p class="dates">{{ certificate.date }}</p>
+                    </section>
+                {% endfor %}
+            </section>
+            <section id="education">
+                <h2>👨‍🎓 Formations</h2>
+                {% for education_item in education %}
+                    <section class="experience">
+                    <h3>{{ education_item.area }}</h3>
+                    <p class="place">{{ education_item.institution }}</p>
+                    <p class="dates">{{ education_item.startDate.strftime('%Y%d%m') }} → {{ education_item.endDate | default("Aujourd'hui") }}</p>
+                    </section>
+                {% endfor %}
+            </section>
+            <section id="projects">
+                <h2>✨ Loisirs et projets</h2>
+                <ul>
+                {% for project in projects %}
+                <li>
+                    {% if project.url is defined %}
+                        <a href="{{ project.url }}">{{ project.name }}</a>
+                    {% else %}
+                        {{ project.name }}
+                    {% endif %}
+                </li>
+                {% endfor %}
+                </ul>
+            </section>
+        </div>
+    </main>    
+    <footer>Dernière mise à jour : 08/07/2024</footer>
+    <script>window.onload = e => {
+        document.querySelector("header > img").style.transition = "ease-out 0.12s"; 
+        }
+    </script>
+</body>
+</html>
