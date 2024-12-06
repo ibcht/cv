@@ -44,7 +44,7 @@ jobs:
           # See "data_format" for supported formats
           data_file: resume.yaml
           # To be used with the "data_file" input, can be one of: env, ini, yaml or json
-          data_format: yaml
+          #data_format: yaml
               
   deploy:
     environment:
