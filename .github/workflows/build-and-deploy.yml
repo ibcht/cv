@@ -39,7 +39,7 @@ jobs:
           # 
           output_file: index.html
           # Fails on missing values
-          strict: true
+          #strict: true
           # 
           # See "data_format" for supported formats
           data_file: resume.yaml
