@@ -40,12 +40,12 @@ jobs:
           # 
           template: index.html.j2
           # 
-          output_file: index.html
+          output_file: www/index.html
           # Fails on missing values
           #strict: true
           # 
           # See "data_format" for supported formats
-          data_file: resume.yaml
+          data_file: resume.yml
           # To be used with the "data_file" input, can be one of: env, ini, yaml or json
           #data_format: yaml
       - name: Setup Pages
@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          path: 'www'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
