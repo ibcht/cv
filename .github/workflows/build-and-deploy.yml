@@ -33,7 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Calculate current ISO time
-        run: echo "last_modified=$(date -Iminutes) >> "$GITHUB_ENV"
+        run: echo "last_modified=$(date -Iminutes)" >> "$GITHUB_ENV"
       - name: Update resume lastModified date
         id: lookupSdkVersion
         uses: mikefarah/yq@master
