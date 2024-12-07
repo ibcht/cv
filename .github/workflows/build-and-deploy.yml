@@ -33,12 +33,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Calculate current ISO time
-        run: echo "last_modified=$(date -Iminutes)" >> "$GITHUB_ENV"
+        id: get_current_time
+        run: echo "last_modified=$(date -Iminutes)" >> "$GITHUB_OUTPUT"
       - name: Update resume lastModified date
         id: lookupSdkVersion
         uses: mikefarah/yq@master
         with:
-          cmd: yq -i '.meta.lastModified = "${{ last_modified }}"' resume.yml
+          cmd: yq -i '.meta.lastModified = "${{ steps.get_current_time.outputs.last_modified }}"' resume.yml
       - name: Jinja2 Action
         # You may pin to the exact commit or the version.
         # uses: cuchi/jinja2-action@1149b92d9ea6db61d7f71c22e3d5028d8065f140
