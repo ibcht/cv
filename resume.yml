@@ -12,7 +12,7 @@ basics:
     - network: GitHub
       username: ibcht
       url: https://github.com/ibcht
-  birthdate: 08/05/1993 
+  birthdate: 08/05/1993
 skills:
   - name: Administration système
     keywords:
@@ -143,3 +143,5 @@ projects:
   - name: Piano, guitare, musique en général
   - name: Environnement et mobilité
   - name: Vélo
+meta:
+  lastModified: "toto"
