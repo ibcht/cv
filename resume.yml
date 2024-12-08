@@ -145,3 +145,4 @@ projects:
   - name: Vélo
 meta:
   lastModified: "2024-12-08T21:02+00:00"
+  version: commit_id_goes_here 

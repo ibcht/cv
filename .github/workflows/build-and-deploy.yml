@@ -40,16 +40,20 @@ jobs:
             resume:
               - 'resume.yml'
           base: ${{ github.ref }}
+
       - name: Calculate current ISO time
         id: get_current_time
         run: echo "last_modified=$(date -Iminutes)" >> "$GITHUB_OUTPUT"
         if: steps.resume_changed.outputs.resume == 'true'
 
       - name: Update resume lastModified date
-        id: lookupSdkVersion
         uses: mikefarah/yq@master
         with:
-          cmd: yq -i '.meta.lastModified = "${{ steps.get_current_time.outputs.last_modified }}"' resume.yml
+          cmd: | 
+            yq -i '
+              .meta.lastModified = "${{ steps.get_current_time.outputs.last_modified }}"
+              .meta.version = "${{ github.sha }}"
+            ' resume.yml
         if: steps.resume_changed.outputs.resume == 'true'
 
       - name: Commit the change

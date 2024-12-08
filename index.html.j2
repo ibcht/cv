@@ -95,7 +95,7 @@
             </section>
         </div>
     </main>    
-    <footer>Dernière mise à jour : {{ meta.lastModified }}</footer>
+    <footer>Dernière mise à jour : <a href="https://github.com/ibcht/cv/commit/{{ meta.version }}">{{ meta.lastModified }}</a></footer>
     <script>window.onload = e => {
         document.querySelector("header > img").style.transition = "ease-out 0.12s"; 
         }
