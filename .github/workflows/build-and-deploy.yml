@@ -39,7 +39,7 @@ jobs:
           filters: |
             resume:
               - 'resume.yml'
-
+          base: ${{ github.ref }}
       - name: Calculate current ISO time
         id: get_current_time
         run: echo "last_modified=$(date -Iminutes)" >> "$GITHUB_OUTPUT"
