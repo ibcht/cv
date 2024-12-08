@@ -144,5 +144,5 @@ projects:
   - name: Environnement et mobilité
   - name: Vélo
 meta:
-  lastModified: "2024-12-08T21:02+00:00"
-  version: commit_id_goes_here
+  lastModified: "2024-12-08T21:31+00:00"
+  version: d29dbb5f537db7c6f3d6627e7aa93fa3d0b5c789
