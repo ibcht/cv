@@ -23,7 +23,8 @@
 			"extensions": [
 				"github.vscode-github-actions",
 				"redhat.vscode-yaml",
-				"samuelcolvin.jinjahtml"
+				"samuelcolvin.jinjahtml",
+				"ritwickdey.LiveServer"
 			]
 		}
 	},
