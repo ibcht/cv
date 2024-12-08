@@ -46,7 +46,7 @@ jobs:
         run: echo "last_modified=$(date -Iminutes)" >> "$GITHUB_OUTPUT"
         if: steps.resume_changed.outputs.resume == 'true'
 
-      - name: Update resume lastModified date
+      - name: Update resume date and version
         uses: mikefarah/yq@master
         with:
           cmd: | 
