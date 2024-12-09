@@ -1,3 +1,6 @@
+{% macro show_date(date) -%}
+    {{ date.strftime('%m / %Y') if date is defined else "Aujourd'hui" }}
+{%- endmacro %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +12,10 @@
     <link rel="stylesheet" href="print.css" media="print">
     <link rel="shortcut icon" href="/icons8-hammer-30.png" type="image/x-icon">
 </head>
-<body>     
+<body>
     <header>
         <img src="./photo.jpg" alt="Irénée Bauchet says 'Hello'">
-        <h1>{{ basics.name }}<span class="jobtitle">{{ basics.label }}</span></h1>
+        <h1>{{ basics.name }} <span class="jobtitle">{{ basics.label }}</span></h1>
         <div class="print">
             <a href="#" onclick="window.print()" class="print">Imprimer ↩</a></div>
         </div>
@@ -50,7 +53,7 @@
                 <section class="experience">
                     <h3>{{ work_item.position }}</h3>
                     <p class="place">{{ work_item.name }} @ {{ work_item.location }}</p>
-                    <p class="dates">{{ work_item.startDate }} → {{ work_item.endDate | default("Aujourd'hui") }}</p>
+                    <p class="dates">{{ show_date(work_item.startDate) }} → {{ show_date(work_item.endDate) }}</p>
                     <ul class="activities">
                     {% for highlight in work_item.highlights %}
                         <li>{{ highlight }}</li>
@@ -65,7 +68,7 @@
                     <section class="experience">
                     <h3>{{ certificate.name }}</h3>
                     <p class="place">{{ certificate.issuer }}</p>
-                    <p class="dates">{{ certificate.date }}</p>
+                    <p class="dates">{{ show_date(certificate.date) }}</p>
                     </section>
                 {% endfor %}
             </section>
@@ -75,7 +78,7 @@
                     <section class="experience">
                     <h3>{{ education_item.area }}</h3>
                     <p class="place">{{ education_item.institution }}</p>
-                    <p class="dates">{{ education_item.startDate.strftime('%Y%d%m') }} → {{ education_item.endDate | default("Aujourd'hui") }}</p>
+                    <p class="dates">{{ show_date(education_item.startDate) }} → {{ show_date(education_item.endDate) }}</p>
                     </section>
                 {% endfor %}
             </section>
